@@ -11,4 +11,5 @@
 @interface UIFooterView : UIView
 @property (nonatomic) UIButton *backButton;
 @property (nonatomic) UIButton *forwardButton;
+@property (nonatomic) UIButton *onOffButton;
 @end

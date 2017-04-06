@@ -43,7 +43,8 @@
     self.footer = [[UIFooterView alloc] init];
     [self.footer.backButton addTarget:self action:@selector(backClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.footer.forwardButton addTarget:self action:@selector(forwardClick:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [self.footer.onOffButton addTarget:self action:@selector(onOffClick:) forControlEvents:UIControlEventTouchUpInside];
+  
     [self.view addSubview:self.header];
     [self.view addSubview:self.webhandler.webView];
     [self.view addSubview:self.footer];
@@ -141,4 +142,11 @@
     }
 }
 
+- (void)onOffClick:(id)sender {
+  if([self.footer.onOffButton.titleLabel.text isEqual:@"On"]) {
+    [self.footer.onOffButton setTitle:@"Off" forState:UIControlStateNormal];
+  } else {
+    [self.footer.onOffButton setTitle:@"On" forState:UIControlStateNormal];
+  }
+}
 @end

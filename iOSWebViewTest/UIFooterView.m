@@ -23,9 +23,14 @@
         self.forwardButton = [[UIButton alloc] init];
         [self.forwardButton setTitle:@"Forward" forState:UIControlStateNormal];
         [self.forwardButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        
+      
+        self.onOffButton = [[UIButton alloc] init];
+        [self.onOffButton setTitle:@"On" forState:UIControlStateNormal];
+        [self.onOffButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+      
         [self addSubview:self.backButton];
         [self addSubview:self.forwardButton];
+        [self addSubview:self.onOffButton];
     }
     return self;
 }
@@ -34,6 +39,7 @@
     CGRect viewRect = self.frame;
     self.backButton.frame = CGRectMake(0, 0, kBUTTONSIZE, viewRect.size.height);
     self.forwardButton.frame = CGRectMake(0 + kBUTTONSIZE + 10, 0, kBUTTONSIZE, viewRect.size.height);
+    self.onOffButton.frame = CGRectMake(0 + kBUTTONSIZE + 70, 0, kBUTTONSIZE, viewRect.size.height);
 }
 
 @end
